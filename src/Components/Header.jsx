@@ -23,7 +23,7 @@ const Header = () => {
                                 Testimonial</li>
                         </ul>
                     </div>
-                    <button className='font-Lato font-semibold text-base text-primary-white ml-41.75 bg-primary-green px-6.25 py-[14.5px] rounded-[5px]'>Register</button>
+                    <button className='font-Lato font-semibold text-base text-primary-white ml-41.75 bg-primary-green px-6.25 py-[14.5px] rounded-[5px] cursor-pointer'>Register</button>
                 </div>
             </Container>
         </section>
