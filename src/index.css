@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+@theme {
+  --font-Lato: "Lato", sans-serif; 
+  --color-primary-green: #06C279; 
+  --color-banner-mix: #EEFFF9;
+  --color-primary-black: #1B1B1B;
+  --color-primary-white: #FFFFFF;
+  --color-primary-gray: #717171;
+}
