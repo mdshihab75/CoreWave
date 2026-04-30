@@ -3,7 +3,7 @@ import Container from './Ui/Container'
 import GroupImage from '../assets/images/group.png'
 const Experience = () => {
   return (
-    <section className='mt-21.25 mb-25'>
+    <section className='mt-21.25'>
         <Container>
             <div className='flex gap-36.25 items-center'>
                 <div className='w-2/4'>
