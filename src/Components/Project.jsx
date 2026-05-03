@@ -1,24 +1,56 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Container from './Ui/Container'
 import projectimage1 from '../assets/images/project-1.png'
 import projectimage2 from '../assets/images/project-2.png'
 import projectimage3 from '../assets/images/project-3.png'
 
 const Project = () => {
+  const [active, setActive] = useState(0);
+
+  const items = [
+    "Mobile App",
+    "Web Development",
+    "UI/UX Design",
+    "Graphic Design",
+    "Motion Graphic",
+  ];
+
   return (
     <section className='mt-22.75'>
       <Container>
         <h2 className='font-Lato font-semibold text-[45px] leading-13.5 text-primary-black text-center'>Our Latest Project</h2>
-        <ul className='flex gap-18.25 text-center justify-center mt-8.25'>
-          <li className='font-Lato font-medium text-base text-sixth-color'>Mobile App</li>
-          <li className='font-Lato font-medium text-base text-sixth-color'>Web Development</li>
-          <li className='font-Lato font-medium text-base text-sixth-color'>UI/UX Design</li>
-          <li className='font-Lato font-medium text-base text-sixth-color'>Graphic Design</li>
-          <li className='font-Lato font-medium text-base text-sixth-color'>Motion Graphic</li>
+        <ul className='flex gap-18.25 items-center justify-center mt-8'>
+          {items.map((item, index) => (
+            <li 
+              key={index}
+              onClick={() => setActive(index)}
+              className={`font-Lato font-medium text-base text-sixth-color hover:text-primary-green cursor-pointer transition duration-300 ${
+                active === index
+                  ? "text-primary-green"
+                  : "text-sixth-color"
+              }`}
+            >
+              {item}
+            </li>
+          ))}
         </ul>
-        <div className='w-223 h-0.5 bg-eighth-color mx-auto mt-5.25'>
 
+        {/* Line */}
+        <div className='relative w-223 h-1 bg-eighth-color mx-auto mt-5'>
+  <div
+    className='absolute h-1 bg-primary-green transition-all duration-300'
+    style={{
+      width: "154px",
+      left: `${active * 154}px`,
+    }}
+  />
+</div>
+
+        {/*<div className='relative w-223 h-1 bg-eighth-color mx-auto mt-5.25'>
+          <div className="after:content-[''] after:absolute after:left-90 after:bottom-0 after:h-1 after:w-0 hover:after:w-38.5 after:bg-primary-green after:duration-300 after:transition-all cursor-pointer">
+          
         </div>
+        </div>*/}
         <div className='flex gap-6 mt-13.25'>
           <div>
             <img className='rounded-[15px]' src={projectimage1} alt="project-1" />
@@ -39,7 +71,7 @@ const Project = () => {
         <div className='text-center'>
           <button className='font-Lato font-semibold text-base text-primary-white bg-primary-green px-6.25 py-[14.5px] rounded-[5px] mt-[46.5px]'>View All Projects</button>
         </div>
-        
+
       </Container>
     </section>
   )
