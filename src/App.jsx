@@ -3,6 +3,7 @@ import Header from './Components/Header'
 import Banner from './Components/Banner'
 import Experience from './Components/Experience'
 import Services from './Components/Services'
+import Project from './Components/Project'
 
 const App = () => {
   return (
@@ -11,6 +12,7 @@ const App = () => {
     <Banner/>
     <Experience/>
     <Services/>
+    <Project/>
     </>
   )
 }
