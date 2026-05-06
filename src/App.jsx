@@ -7,6 +7,7 @@ import Project from './Components/Project'
 import TopServices from './Components/TopServices'
 import Review from './Components/Review'
 import Trial from './Components/Trial'
+import Footer from './Components/Footer'
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
     <TopServices/>
     <Review/>
     <Trial/>
+    <Footer/>
     </>
   )
 }
