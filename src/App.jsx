@@ -6,6 +6,7 @@ import Services from './Components/Services'
 import Project from './Components/Project'
 import TopServices from './Components/TopServices'
 import Review from './Components/Review'
+import Trial from './Components/Trial'
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
     <Project/>
     <TopServices/>
     <Review/>
+    <Trial/>
     </>
   )
 }

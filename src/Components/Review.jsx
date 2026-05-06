@@ -43,13 +43,13 @@ const Review = () => {
           <div
             className="flex transition-all duration-500"
             style={{
-              transform: `translateX(-${active * 100}%)`,
+              transform: `translateX(-${active * (100 / 3)}%)`,
             }}
           >
             {testimonials.map((item) => (
               <div
                 key={item.id}
-                className="w-330 px-4"
+                className="w-1/3 px-4"
               >
                 <div className="bg-primary-white rounded-[15px] p-8 shadow-xl text-center">
                   <div className="relative flex justify-center">
@@ -82,12 +82,12 @@ const Review = () => {
         </div>
 
         {/* Dots */}
-        <div className="flex justify-center gap-3 mt-8">
+        <div className="flex justify-center gap-3 mt-11.5">
           {testimonials.map((_, index) => (
             <button
               key={index}
               onClick={() => setActive(index)}
-              className={`h-2 rounded-full transition-all duration-300 ${
+              className={`h-2.5 w-9 rounded-full transition-all duration-300 ${
                 active === index
                   ? "w-8 bg-primary-green"
                   : "w-4 bg-gray-300"
@@ -95,6 +95,7 @@ const Review = () => {
             />
           ))}
         </div>
+
       </Container>
     </section>
   );
