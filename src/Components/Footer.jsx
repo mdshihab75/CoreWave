@@ -92,17 +92,21 @@ const Footer = () => {
 
                     <div>
                         <h5 className='font-Lato font-semibold text-[20px] leading-7.5 text-primary-black mb-7.5'>Contact Us</h5>
-                        
-                            <input type="email"placeholder="Enter your email"
-                        className="w-60 h-9.5  px-6 text-lg border border-gray-300 outline-none focus:ring-2 focus:ring-gray-300  rounded-[5px] text-input bg-email " />
-                    
-                        <button className='font-Lato font-semibold text-base text-primary-white bg-primary-green px-6.25 py-[14.5px] rounded-[5px] '>Request & Callback</button>
+
+                        <div>
+                            <input type="email" placeholder="Enter your email"
+                                className="w-60 h-9.5  px-6 text-lg border border-gray-300 outline-none focus:ring-2 focus:ring-gray-300  rounded-[5px] text-input bg-email " />
+
+                            <button className='font-Lato font-normal text-base text-primary-white bg-primary-green px-6.25 py-[14.5px] rounded-[5px] mt-3.5 whitespace-nowrap'>
+                                Request & Callback
+                            </button>
+                        </div>
                     </div>
                 </div>
 
-                <div className="text-center text-gray-500 mt-10 border-t border-gray-700 pt-6">
-    © 2026 MyBrand. All rights reserved.
-  </div>
+                <div className=" mt-10.5 border-t border-border pt-3.25 mb-3.5">
+                   <p className='font-Lato font-medium text-sm leading-5.5 text-sixth-color text-center'>@2023 CoreWave. All copyrights reserved</p> 
+                </div>
             </Container>
         </section>
     )
